@@ -1,24 +1,57 @@
-# README
+# Card Game DB
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A card game database application built with Rails 8.1, Ruby 4.0, and SQLite.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+```sh
+make
+```
 
-* System dependencies
+This installs dependencies, prepares the database, and starts the development server.
 
-* Configuration
+## Common Commands
 
-* Database creation
+Run `make help` to see all available commands.
 
-* Database initialization
+| Command | Description |
+|---|---|
+| `make` | Install dependencies, prepare the database, and start the server |
+| `make server` | Start the development server |
+| `make console` | Open Rails console |
+| `make test` | Run RSpec tests |
+| `make test-system` | Run RSpec system tests |
+| `make lint` | Run Standard Ruby linter |
+| `make lint-fix` | Run Standard Ruby linter with auto-fix |
+| `make db-setup` | Create, migrate, and seed the database |
+| `make db-migrate` | Run pending migrations |
+| `make db-seed` | Seed the database |
+| `make ci` | Run the full CI suite |
 
-* How to run the test suite
+## Testing
 
-* Services (job queues, cache servers, search engines, etc.)
+Tests are written with [RSpec](https://rspec.info/). System tests use Capybara with headless Chrome.
 
-* Deployment instructions
+```sh
+make test          # run all specs
+make test-system   # run system specs only
+```
 
-* ...
+## Linting
+
+Code style is enforced by [Standard Ruby](https://github.com/standardrb/standard) with the `standard-rails` and `standard-rspec` plugins.
+
+```sh
+make lint      # check for violations
+make lint-fix  # auto-fix violations
+```
+
+## Documentation
+
+Project documentation lives in `docs/`:
+
+- [Commit Conventions](docs/commits.md)
+
+## CI
+
+GitHub Actions runs linting, security scans, and tests on every pull request and push to `main`. See `.github/workflows/ci.yml` for details.
