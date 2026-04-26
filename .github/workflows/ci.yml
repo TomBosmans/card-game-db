@@ -93,6 +93,17 @@ jobs:
           # REDIS_URL: redis://localhost:6379/0
         run: bin/rails db:test:prepare && bin/rspec --exclude-pattern "spec/system/**/*_spec.rb"
 
+      - name: Report coverage
+        if: always()
+        run: |
+          if [ -f coverage/.last_run.json ]; then
+            line=$(ruby -rjson -e 'puts JSON.parse(File.read("coverage/.last_run.json"))["result"]["line"]')
+            branch=$(ruby -rjson -e 'puts JSON.parse(File.read("coverage/.last_run.json"))["result"]["branch"]')
+            echo "### Coverage" >> $GITHUB_STEP_SUMMARY
+            echo "- Line: ${line}%" >> $GITHUB_STEP_SUMMARY
+            echo "- Branch: ${branch}%" >> $GITHUB_STEP_SUMMARY
+          fi
+
   system-test:
     runs-on: ubuntu-latest
 
