@@ -1,0 +1,11 @@
+{
+  "name": "Card Game DB",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [3000],
+  "remoteUser": "dev",
+  "containerEnv": {
+    "BINDING": "0.0.0.0"
+  }
+}
