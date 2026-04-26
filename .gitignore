@@ -39,3 +39,6 @@
 
 # Ignore coverage reports.
 /coverage
+
+# Ignore Node modules (used for commitlint in CI).
+/node_modules
