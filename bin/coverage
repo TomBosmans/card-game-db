@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+system("bin/rspec") || exit(1)
+puts "\nCoverage report: coverage/index.html"
