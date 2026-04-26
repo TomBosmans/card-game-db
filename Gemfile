@@ -76,4 +76,9 @@ group :test do
 
   # Code coverage [https://github.com/simplecov-ruby/simplecov]
   gem "simplecov", require: false
+
+  # Testing helpers
+  gem "shoulda-matchers"
+  gem "factory_bot_rails"
+  gem "faker"
 end
