@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := run
 
-.PHONY: run lint lint-fix test test-system coverage server console db-setup db-migrate db-seed ci help
+.PHONY: run lint lint-fix reek test test-system coverage server console db-setup db-migrate db-seed ci help
 
 run: ## Install dependencies, prepare the database, and start the server
 	@bin/setup
@@ -10,6 +10,9 @@ lint: ## Run Standard Ruby linter
 
 lint-fix: ## Run Standard Ruby linter with auto-fix
 	@bin/standardrb --fix
+
+reek: ## Detect code smells with Reek
+	@bin/reek .
 
 test: ## Run RSpec tests
 	@bin/rspec

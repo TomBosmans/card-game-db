@@ -1,0 +1,29 @@
+exclude_paths:
+  - bin
+  - db/migrate
+  - db/queue_schema.rb
+  - db/cache_schema.rb
+  - db/cable_schema.rb
+  - vendor
+
+detectors:
+  IrresponsibleModule:
+    enabled: false
+
+directories:
+  "app/controllers":
+    InstanceVariableAssumption:
+      enabled: false
+    NestedIterators:
+      max_allowed_nesting: 2
+    UnusedPrivateMethod:
+      enabled: false
+  "app/helpers":
+    UtilityFunction:
+      enabled: false
+  "app/mailers":
+    InstanceVariableAssumption:
+      enabled: false
+  "app/models":
+    InstanceVariableAssumption:
+      enabled: false

@@ -57,6 +57,9 @@ group :development, :test do
   gem "standard-rails"
   gem "standard-rspec"
 
+  # Code smell detection [https://github.com/troessner/reek]
+  gem "reek", require: false
+
   # Testing framework [https://rspec.info/]
   gem "rspec-rails"
 end

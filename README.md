@@ -23,6 +23,7 @@ Run `make help` to see all available commands.
 | `make test-system` | Run RSpec system tests |
 | `make lint` | Run Standard Ruby linter |
 | `make lint-fix` | Run Standard Ruby linter with auto-fix |
+| `make reek` | Detect code smells with Reek |
 | `make db-setup` | Create, migrate, and seed the database |
 | `make db-migrate` | Run pending migrations |
 | `make db-seed` | Seed the database |
@@ -39,11 +40,12 @@ make test-system   # run system specs only
 
 ## Linting
 
-Code style is enforced by [Standard Ruby](https://github.com/standardrb/standard) with the `standard-rails` and `standard-rspec` plugins.
+Code style is enforced by [Standard Ruby](https://github.com/standardrb/standard) with the `standard-rails` and `standard-rspec` plugins. Code smells are detected by [Reek](https://github.com/troessner/reek).
 
 ```sh
 make lint      # check for violations
 make lint-fix  # auto-fix violations
+make reek      # detect code smells
 ```
 
 ## Documentation

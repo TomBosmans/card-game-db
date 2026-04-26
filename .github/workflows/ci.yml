@@ -65,6 +65,9 @@ jobs:
       - name: Lint code for consistent style
         run: bin/standardrb --format github
 
+      - name: Detect code smells
+        run: bin/reek .
+
   test:
     runs-on: ubuntu-latest
 
