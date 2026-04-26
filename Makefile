@@ -18,7 +18,7 @@ test: ## Run RSpec tests
 	@bin/rspec
 
 test-system: ## Run RSpec system tests
-	@bin/rspec spec/system
+	@COVERAGE=false bin/rspec spec/system
 
 coverage: ## Run tests and generate coverage report
 	@bin/coverage
