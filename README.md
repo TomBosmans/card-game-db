@@ -50,6 +50,7 @@ make lint-fix  # auto-fix violations
 
 Project documentation lives in `docs/`:
 
+- [Development Setup](docs/setup.md)
 - [Commit Conventions](docs/commits.md)
 
 ## CI
