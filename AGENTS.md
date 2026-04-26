@@ -11,6 +11,10 @@ This file provides context for AI coding agents working on this project.
 - **Database**: SQLite.
 - **CI**: GitHub Actions. See `.github/workflows/ci.yml`.
 
+## Rules
+
+- **Do not change Reek configuration or rules.** If you are stuck on a Reek warning or believe a rule does not make sense, present your case to the user and only make changes after explicit approval.
+
 ## Workflow
 
 1. Always run `make lint` before committing to ensure code passes Standard Ruby.
